@@ -84,17 +84,6 @@ class Runners {
 				this.mqtt.subscribe('vicparimutuel/Update');
 			}
 		});
-		             
-		// vic parimutuel query response
-		Event.on('vicparimutuel/Response', (message) => { 
-			let resp = JSON.parse(message);
-			if (resp.query == "oddslist" && resp.data[0].TabRaceId == this.tabRaceId) {
-				utils.showToast('odds snapshot');
-				this.processWiftPariSnapshot("Stab", resp.data);
-
-				// this.render();
-			}   
-		}); 
 
 		// mrr runner update message
 		Event.on('meetingracerunner/Update', (message) => { 
@@ -106,6 +95,17 @@ class Runners {
 				// this.render();
 			}   
 		});    
+		             
+		// vic parimutuel query response
+		Event.on('vicparimutuel/Response', (message) => { 
+			let resp = JSON.parse(message);
+			if (resp.query == "oddslist" && resp.data[0].TabRaceId == this.tabRaceId) {
+				utils.showToast('odds snapshot');
+				this.processWiftPariSnapshot("Stab", resp.data);
+
+				// this.render();
+			}   
+		}); 
 
 		// vic parimutuel prices update message
 		Event.on('vicparimutuel/Update', (message) => { 
@@ -187,7 +187,7 @@ class Runners {
 		let i = this.viewModel.runners.findIndex((x) => x.Number == data.SelectionsString);
 		let runner = this.viewModel.runners[i];
 		if (mode == "Stab") {
-			runner.StabUpdate = (data.Amount > runner.Stab ? 'price-up' : (data.Amount < runner.Amount ? 'price-dn' : runner.StabUpdate));
+			runner.StabUpdate = (data.Amount > runner.Stab ? 'price-up' : (data.Amount < runner.Stab ? 'price-dn' : runner.StabUpdate));
 			runner.Stab = data.Amount;
 		}
 	}       
