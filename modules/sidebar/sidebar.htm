@@ -1,0 +1,9 @@
+<div class="currentTime">{ vm.currentTime }</div>
+<div class="sidenav">
+    <br /><br /><i class="fa fa-check" [ngClass]="{'fa-hide': !filters.All}"></i> <a (click)="setMode('All')" class="navitem" href="#">All Meetings</a>
+    <br /><br /><i class="fa fa-check" [ngClass]="{'fa-hide': !filters.R}"></i> <a (click)="setMode('R')" class="navitem" href="#">Horseracing</a>
+    <br /><br /><i class="fa fa-check" [ngClass]="{'fa-hide': !filters.H}"></i> <a (click)="setMode('H')" class="navitem" href="#">Harness</a>
+    <br /><br /><i class="fa fa-check" [ngClass]="{'fa-hide': !filters.G}"></i> <a (click)="setMode('G')" class="navitem" href="#">Greyhounds</a>
+    <br /><br /><i class="fa fa-check" [ngClass]="{'fa-hide': !filters.A}"></i> <a (click)="setMode('A')" class="navitem" href="#">Australia</a>
+    <br /><br /><i class="fa fa-check" [ngClass]="{'fa-hide': !filters.I}"></i> <a (click)="setMode('I')" class="navitem" href="#">International</a>
+</div>

@@ -1,0 +1,49 @@
+div.formandtips {
+    background-color: #2f374b;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+    color: #666;
+    height: 65px;
+    border-bottom: 5px solid black;    
+    border-radius: 8px;
+}
+div.formandtips span {
+    padding: 0px 10px;
+    color: rgb(150, 150, 37);
+    color: darkorange;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+div.card { 
+    margin-top: 20px;
+    background-color: #272b30;
+    border: 2px solid #474f59;
+}
+.card-header {
+    background-color: #474f59;
+    color: darkorange;
+    text-transform: uppercase;
+    letter-spacing: 4px;    
+}
+.card-body {
+    height: 300px;
+}
+.formcard {
+    height: 270px;
+    overflow-y: scroll;
+}
+.formcard::-webkit-scrollbar {
+    width: 15px;
+}
+table.dataList tr td {
+    text-align: center;
+    padding: 4px 8px;
+}
+table.dataList tr td:last-child {
+    text-align: left;
+}
+
+span.caption, table.dataList tr:first-child {
+    color: darkorange;
+}

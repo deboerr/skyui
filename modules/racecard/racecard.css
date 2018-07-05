@@ -1,0 +1,18 @@
+div.racecard {
+    background-color: #2f374b;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    color: #666;
+    height: 65px;    
+    border-bottom: 5px solid black;
+    border-radius: 8px;
+}
+div.racecard span {
+    padding: 0px 10px;
+    color: rgb(37, 120, 120);
+}
+div.racecard span:first-child { 
+    color: darkorange;
+    letter-spacing: 4px;
+}

@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div class="formandtips">
+        <span>Form and Tips</span>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Tips</div>
+        <div class="card-body">
+            <% if ( isTipDataAvailable ) { %>
+            <div>
+                <p class="card-text"><span class="caption">TIPSTER : </span><%= tipList[0].Tipster %></p>
+                <table class="dataList" border="1" width="100%">
+                    <tr>
+                        <td>Finish<br>Pos</td><td>Runner<br>No</td><td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>1</td><td><%= tipList[0].Runner1 %></td><td><%= tipList[0].Runner1Name %></td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td><%= tipList[0].Runner2 %></td><td><%= tipList[0].Runner2Name %></td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td><%= tipList[0].Runner3 %></td><td><%= tipList[0].Runner3Name %></td>
+                    </tr>
+                    <tr>
+                        <td>4</td><td><%= tipList[0].Runner4 %></td><td><%= tipList[0].Runner4Name %></td>
+                    </tr>
+                </table>
+            </div>
+            <% } %>            
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Form</div>
+        <div class="card-body">
+            <% if ( isTipDataAvailable ) { %>          
+            <div class="formcard">
+                <table class="dataList" border="1" width="100%">
+                    <tr>
+                        <td>Runner</td>
+                        <td>Last-5 Starts</td>
+                        <!-- <td>Last-20 Starts</td> -->
+                        <td>Sire</td>
+                    </tr>
+                    <% _.forEach(formList, function(form, i) { %>
+                    <tr>
+                        <td><%= form.Number %></td>
+                        <td><%= form.Last5Starts %></td>
+                        <!-- <td><%= form.Last20Starts %></td> -->
+                        <td><%= form.Sire %></td>
+                    </tr>
+                    <% }) %>                    
+                </table>
+            </div>
+            <% } %>            
+        </div>
+    </div>
+
+</div>

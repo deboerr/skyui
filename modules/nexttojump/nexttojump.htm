@@ -1,0 +1,18 @@
+<div class="table-responsive ntjcontainer">
+    <div>    
+        <table class="table nexttojump">
+            <tr id="race-grid">
+                <td rv-each-race="races">
+                    <div class="ntjdiv" rv-class-closed="race.Finished" rv-on-click="ctrl.raceOnClick">
+                        { race.VenueName }
+                        <br><img rv-src="race.Flag" height="15px"> &nbsp; 
+                            <img rv-src="race.RacingType">
+                        <br><span class="raceno">{ race.RaceNum }</span> @ 
+                            <span class="time">{ race.Time }</span>
+                        <br><span class="race-status">{ race.RaceStatus }</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

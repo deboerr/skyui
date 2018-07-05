@@ -1,0 +1,50 @@
+table.runner-grid {
+    background-color: #272b30;
+    border-spacing:0 5px;
+    letter-spacing: 1.5px;
+    color: #a1d8b1;
+}
+tr.pane-header {
+    margin-top:5px;
+    border-bottom:2px solid #444;
+    color: darkorange;
+}
+tr.pane, tr.pane-header {
+    margin-top:5px;
+    border-bottom:2px solid #444;
+}
+tr.pane td {
+    padding:15px;
+}
+.badge-success {
+    background-color: green;
+}
+.badge-danger {
+    background-color: crimson;
+}
+.align-right {
+    text-align: right;
+}
+.jumptime {
+    color: aquamarine;
+}
+.expanded {
+    letter-spacing: 4px;
+}
+.scratched {
+    /* font-style: italic; */
+    color: rgb(180, 37, 37);
+}
+.finish-position {
+    color: darkorange;
+}
+.price-up {
+    background-color: #242;
+}
+.price-dn {
+    background-color: #422;
+}
+.price1 {
+    background-color: #2e3237;
+    color: #edfcc2;
+}

@@ -1,0 +1,26 @@
+<div class="container-fluid">
+	<table class="runner-grid" width="100%">
+		<thead>
+			<tr class="pane pane-header">
+				<td colspan="3" class="expanded"><span class="jumptime"><%= getTime(race.StartTime) %></span>
+					 &nbsp; <%= race.RaceNum %> &nbsp; <%= race.Name %>  &nbsp; (<%= race.TabRaceId %>) 
+				</td>
+				<td width="100px" class="pull-right align-right">U-Bet</td>
+				<td width="100px" class="pull-right align-right">NSW</td>
+				<td width="100px" class="pull-right align-right">S-TAB</td>
+				<td width="100px" class="pull-right align-right">Fixed</td>
+			</tr>
+		</thead>		
+		<tbody>
+			<tr rv-each-runner="runners" class="pane">
+                <td width="20px"><span class="badge badge-pill badge-success" rv-class-badge-danger="runner.Scratched">{ runner.Cnt }</span></td>
+				<td width="20px" class="finish-position">{ runner.FinishingPosition }</td>
+				<td class="name" rv-class-scratched="runner.Scratched">{ runner.Name }</td>
+				<td width="100px" class="pull-right align-right">{ runner.Ubet | decimal }</td>
+				<td width="100px" class="pull-right align-right">{ runner.Nsw | decimal }</td>
+				<td width="100px" class="pull-right align-right" rv-addclass="runner.StabUpdate">{ runner.Stab | decimal }</td>
+				<td width="100px" class="pull-right align-right" rv-addclass="runner.FixedUpdate">{ runner.FixedReturnWin | decimal }</td>
+			</tr>
+		</tbody>		
+	</table>
+</div>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SkyUi - v2</title>
+	
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="assets/js/es6-shim.min.js" type="text/javascript"></script>
+    <script src="assets/js/underscore-min.js" type="text/javascript"></script>
+    <script src="assets/js/underscore.date.js" type="text/javascript"></script>	
+    <script src="assets/js/underpub.js" type="text/javascript"></script>	
+    
+    <script src="assets/js/paho-mqtt-min.js" type="text/javascript"></script>
+
+    <script src="assets/js/rivets.bundled.min.js" type="text/javascript"></script>
+
+    <script src="assets/js/utils.js" type="text/javascript"></script>  <!-- must be imported last -->
+
+    <link href="assets/css/bootstrap3.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css"/>
+    
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<nexttojump></nexttojump>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-1">
+				<sidebar></sidebar>
+			</div>
+			<div class="col-sm-8">
+				<racecard></racecard>
+				<runners></runners>
+			</div>
+			<div class="col-sm-3">
+				<formandtips></formandtips>
+			</div>		
+		</div>
+	</div>
+	
+	<div id="snackbar"></div>
+
+    <script src="modules/nexttojump/nexttojump.js" type="text/javascript"></script>
+    <script src="modules/racecard/racecard.js" type="text/javascript"></script>
+    <script src="modules/formandtips/formandtips.js" type="text/javascript"></script>
+    <script src="modules/sidebar/sidebar.js" type="text/javascript"></script>
+    <script src="modules/runners/runners.js" type="text/javascript"></script>
+    <script src="app.js" type="text/javascript"></script>
+   
+</body>
+<HEAD>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+</HEAD>
+</html>
